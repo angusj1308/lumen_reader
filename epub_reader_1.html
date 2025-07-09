@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>EPUB Reader</title>
+  <script src="https://unpkg.com/epubjs/dist/epub.min.js"></script>
+</head>
+<body>
+
+<!-- The viewer div -->
+<div id="viewer" style="height: 100vh;"></div>
+
+<!-- All the JavaScript code will run as expected, already added in the canvas -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+  const bookUrl = params.get("book");
+
+  if (bookUrl) {
+    const book = ePub(bookUrl);
+    const rendition = book.renderTo("viewer", {
+      width: "100%",
+      height: "100%"
+    });
+    rendition.display();
+    window.rendition = rendition;
+  } else {
+    document.getElementById("viewer").innerText = "No book URL provided.";
+  }
+});
+</script>
+
+</body>
+</html>
