@@ -1,0 +1,61 @@
+/* Basic reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+  background-color: #fefefe;
+  color: #111;
+}
+
+#viewer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+#menu-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  z-index: 10;
+  border-bottom: 1px solid #ddd;
+}
+
+.hidden {
+  display: none;
+}
+
+#popup-menu {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  z-index: 20;
+}
+
+.popup-option {
+  padding: 0.25rem 0.5rem;
+  background: #eee;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.popup-option:hover {
+  background-color: #ddd;
+}
