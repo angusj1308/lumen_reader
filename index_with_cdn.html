@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eReader</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/epubjs/dist/epub.min.js"></script>
+</head>
+<body>
+  <div id="menu-bar" class="hidden">
+    <button id="back-button">← Back</button>
+    <button id="toc-button">Chapters</button>
+    <button id="font-button">Aa</button>
+    <button id="theme-button">🌗</button>
+    <button id="notes-button">📝</button>
+  </div>
+
+  <div id="viewer"></div>
+
+  <div id="popup-menu" class="hidden">
+    <button class="popup-option" data-action="define">Define</button>
+    <button class="popup-option" data-action="explain">Explain</button>
+    <button class="popup-option" data-action="translate">Translate</button>
+    <button class="popup-option" data-action="tutor">Ask Tutor</button>
+    <button class="popup-option" data-action="highlight">Highlight</button>
+    <button class="popup-option" data-action="notebook">Add to Notebook</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
